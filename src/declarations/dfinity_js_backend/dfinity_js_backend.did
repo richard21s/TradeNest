@@ -1,0 +1,15 @@
+service: () -> {
+    addProduct: (record {attachmentURL:text; title:text; description:text; seller:text; price:nat64; location:text}) -> (variant {Ok:record {id:text; attachmentURL:text; title:text; soldAmount:text; description:text; seller:text; chatToken:text; rating:text; price:text; location:text}; Err:variant {PaymentFailed:text; InvalidPayload:text; NotFound:text; PaymentCompleted:text}});
+    buyProduct: (record {username:text; productId:text}) -> (variant {Ok:text; Err:variant {PaymentFailed:text; InvalidPayload:text; NotFound:text; PaymentCompleted:text}});
+    getChatFeature: (text, text, text) -> (variant {Ok:record {token:text; productId:text; buyerUsername:text; sellerUsername:text}; Err:variant {PaymentFailed:text; InvalidPayload:text; NotFound:text; PaymentCompleted:text}}) query;
+    getHomePageData: () -> (vec record {id:text; attachmentURL:text; title:text; soldAmount:text; description:text; seller:text; chatToken:text; rating:text; price:text; location:text}) query;
+    getProductDetails: (text) -> (variant {Ok:record {id:text; attachmentURL:text; title:text; soldAmount:text; description:text; seller:text; chatToken:text; rating:text; price:text; location:text}; Err:variant {PaymentFailed:text; InvalidPayload:text; NotFound:text; PaymentCompleted:text}}) query;
+    getProductList: (text) -> (vec record {id:text; attachmentURL:text; title:text; soldAmount:text; description:text; seller:text; chatToken:text; rating:text; price:text; location:text}) query;
+    getTransactionHistory: (text) -> (vec record {status:text; productId:text; seller:text; buyer:text; amount:text}) query;
+    getUserProfile: (text) -> (variant {Ok:record {username:text; password:text; email:text; walletTokens:text; rating:text}; Err:variant {PaymentFailed:text; InvalidPayload:text; NotFound:text; PaymentCompleted:text}}) query;
+    loginUser: (text, text) -> (variant {Ok:text; Err:variant {PaymentFailed:text; InvalidPayload:text; NotFound:text; PaymentCompleted:text}}) query;
+    registerUser: (text, text, text) -> (variant {Ok:text; Err:variant {PaymentFailed:text; InvalidPayload:text; NotFound:text; PaymentCompleted:text}});
+    submitReview: (text, nat64, text, text) -> (variant {Ok:text; Err:variant {PaymentFailed:text; InvalidPayload:text; NotFound:text; PaymentCompleted:text}});
+    topUpWallet: (record {username:text; amount:nat64}) -> (variant {Ok:text; Err:variant {PaymentFailed:text; InvalidPayload:text; NotFound:text; PaymentCompleted:text}});
+    updateProduct: (text, record {attachmentURL:text; title:text; description:text; seller:text; price:nat64; location:text}) -> (variant {Ok:record {id:text; attachmentURL:text; title:text; soldAmount:text; description:text; seller:text; chatToken:text; rating:text; price:text; location:text}; Err:variant {PaymentFailed:text; InvalidPayload:text; NotFound:text; PaymentCompleted:text}});
+}
