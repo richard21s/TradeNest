@@ -16,7 +16,7 @@ The features:
 10. Update Product (productId, title, image, description, price) - Updating existing product information.  
 11. TopUp Wallet (amount) - Adds the number of tokens to the user's wallet.   
 12. Submit Review (productId, rating, review) - Added product reviews and ratings by users.     
-13. getChatFeature (productId, sellerUsername, buyerUsername) - Activate the chat feature between sellers and buyers.
+13. Chat Feature (productId, sellerUsername, buyerUsername) - Activate the chat feature between sellers and buyers.
 
 Each item sold has its own token amount and if you want to exchange it for another item that is more expensive or less expensive, you can use a personal token. Personal tokens can be obtained from top up money. There is a chat feature if you want to negotiate the price, the price will then be updated by the user himself.
 Users can create their own account and have their own swallow, have a page listing the items they sell
