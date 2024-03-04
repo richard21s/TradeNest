@@ -20,3 +20,8 @@ The features:
 
 Each item sold has its own token amount and if you want to exchange it for another item that is more expensive or less expensive, you can use a personal token. Personal tokens can be obtained from top up money. There is a chat feature if you want to negotiate the price, the price will then be updated by the user himself.
 Users can create their own account and have their own swallow, have a page listing the items they sell
+
+#Demo Video
+https://youtu.be/j42MgEEB2dk
+
+
